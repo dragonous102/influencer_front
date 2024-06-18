@@ -30,7 +30,7 @@ export const viewport = {
 };
 
 export const metadata = {
-  title: 'Patient AI',
+  title: 'Influencer Marketing Hub',
   description:
     'This is the product for one user.',
   keywords: 'react,material,kit,application,dashboard,admin,template',
