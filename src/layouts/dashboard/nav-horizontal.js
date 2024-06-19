@@ -11,10 +11,9 @@ import { bgBlur } from 'src/theme/css';
 import Scrollbar from 'src/components/scrollbar';
 import { NavSectionHorizontal } from 'src/components/nav-section';
 
-import { HEADER } from '../config-layout';
+import { ASSETS_API } from 'src/config-global';
 import { useNavData } from './config-navigation';
 import HeaderShadow from '../common/header-shadow';
-import { ASSETS_API } from 'src/config-global';
 
 // ----------------------------------------------------------------------
 
@@ -39,7 +38,7 @@ function NavHorizontal() {
           }),
         }}
       >
-        <img src={`${ASSETS_API}/assets/images/logo.svg`} style={{ marginLeft: "10%" }}></img>
+        <img src={`${ASSETS_API}/assets/images/logo.svg`} alt='logo' style={{ marginLeft: "10%" }}></img>
         <Scrollbar
           sx={{
             mr: '10%',

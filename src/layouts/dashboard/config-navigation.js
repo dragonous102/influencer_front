@@ -87,11 +87,12 @@ export function useNavData() {
             path: paths.dashboard.fileManager,
             icon: ICONS.invoice,
             children: [
-              { title: t('Influencer Marketing'), path: paths.dashboard.influencermarketing },
-              { title: t('Social Media'), path: paths.dashboard.socialmedia },
-              { title: t('eMail Marketing'), path: paths.dashboard.emailmarketing },
-              { title: t('AI Marketing'), path: paths.dashboard.aimarketing },
-              { title: t('Affiliate Marketing'), path: paths.dashboard.affiliatemarketing },
+              { title: t('Influencer Marketing'), path: paths.dashboard.influencermarketing.root },
+              { title: t('Social Media'), path: paths.dashboard.socialmediamarketing.root },
+              { title: t('Affiliate Marketing'), path: paths.dashboard.affiliatemarketing.root },
+              { title: t('eCommerce'), path: paths.dashboard.ecommerce.root },
+              { title: t('AI Marketing'), path: paths.dashboard.aimarketing.root },
+              // { title: t('eMail Marketing'), path: paths.dashboard.emailmarketing.root },
             ],
           },
         ],
@@ -102,59 +103,32 @@ export function useNavData() {
       {
         subheader: t('management'),
         items: [
-          // USER
-          // {
-          //   title: t('user'),
-          //   path: paths.dashboard.user.root,
-          //   icon: ICONS.user,
-          //   children: [
-          //     { title: t('profile'), path: paths.dashboard.user.root },
-          //     { title: t('cards'), path: paths.dashboard.user.cards },
-          //     { title: t('list'), path: paths.dashboard.user.list },
-          //     { title: t('create'), path: paths.dashboard.user.new },
-          //     { title: t('edit'), path: paths.dashboard.user.demo.edit },
-          //     { title: t('account'), path: paths.dashboard.user.account },
-          //   ],
-          // },
-
-          // // PRODUCT
-          // {
-          //   title: t('product'),
-          //   path: paths.dashboard.product.root,
-          //   icon: ICONS.product,
-          //   children: [
-          //     { title: t('list'), path: paths.dashboard.product.root },
-          //     {
-          //       title: t('details'),
-          //       path: paths.dashboard.product.demo.details,
-          //     },
-          //     { title: t('create'), path: paths.dashboard.product.new },
-          //     { title: t('edit'), path: paths.dashboard.product.demo.edit },
-          //   ],
-          // },
-
-          // // ORDER
-          // {
-          //   title: t('order'),
-          //   path: paths.dashboard.order.root,
-          //   icon: ICONS.order,
-          //   children: [
-          //     { title: t('list'), path: paths.dashboard.order.root },
-          //     { title: t('details'), path: paths.dashboard.order.demo.details },
-          //   ],
-          // },
-
-          // INVOICE
           {
             title: t('Platforms'),
             path: paths.dashboard.invoice.root,
             icon: ICONS.blog,
             children: [
-              { title: t('Influencer Marketing Platforms'), path: paths.dashboard.influencermarketing_platforms },
-              { title: t('Social Media Marketing'), path: paths.dashboard.socialmediamarketing_platforms },
-              { title: t('Email Marketing'), path: paths.dashboard.emailmarketing_platforms },
-              // { title: t('create'), path: paths.dashboard.invoice.new },
-              // { title: t('edit'), path: paths.dashboard.invoice.demo.edit },
+              { title: t('Influencer Marketing Platforms'), path: paths.dashboard.influencermarketing.platforms },
+              { title: t('Social Media Marketing'), path: paths.dashboard.socialmediamarketing.platforms },
+              { title: t('Social Media Mornitoring'), path: paths.dashboard.socialmediamarketing.mornitoring },
+              { title: t('Affiliate Marketing Software'), path: paths.dashboard.affiliatemarketing.platforms },
+              { title: t('eCommerce'), path: paths.dashboard.ecommerce.platforms },
+              { title: t('AI Marketing'), path: paths.dashboard.aimarketing.platforms },
+              { title: t('Amazon Marketing Software'), path: paths.dashboard.amazonmarketing.platforms },
+            ],
+          },
+          {
+            title: t('Agencies'),
+            path: paths.dashboard.invoice.root,
+            icon: ICONS.blog,
+            children: [
+              { title: t('Influencer Marketing Agencies'), path: paths.dashboard.influencermarketing.platforms },
+              { title: t('Web-Development Agencies'), path: paths.dashboard.socialmediamarketing.platforms },
+              { title: t('Digital Marketing Agencies'), path: paths.dashboard.amazonmarketing.platforms },
+              { title: t('Social Media Agencies'), path: paths.dashboard.socialmediamarketing.mornitoring },
+              { title: t('Crypto & NFT Agencies'), path: paths.dashboard.affiliatemarketing.platforms },
+              { title: t('eCommerce Agencies'), path: paths.dashboard.ecommerce.platforms },
+              { title: t('Branding Agencies'), path: paths.dashboard.aimarketing.platforms },
             ],
           },
           {
@@ -165,8 +139,6 @@ export function useNavData() {
               { title: t('Benchmark Report 2024'), path: paths.dashboard.invoice.root },
               { title: t('Tools'), path: paths.dashboard.invoice.timeline },
               { title: t('Member Login'), path: paths.auth.jwt.login },
-              // { title: t('create'), path: paths.dashboard.invoice.new },
-              // { title: t('edit'), path: paths.dashboard.invoice.demo.edit },
             ],
           },
           {
@@ -177,174 +149,11 @@ export function useNavData() {
               { title: t('About Our Company'), path: paths.dashboard.invoice.root },
               { title: t('Agencies Testing Methodology'), path: paths.dashboard.invoice.timeline },
               { title: t('Software Testing Methodology'), path: paths.auth.jwt.login },
-              // { title: t('create'), path: paths.dashboard.invoice.new },
-              // { title: t('edit'), path: paths.dashboard.invoice.demo.edit },
             ],
           },
 
-          // // BLOG
-          // {
-          //   title: t('blog'),
-          //   path: paths.dashboard.post.root,
-          //   icon: ICONS.blog,
-          //   children: [
-          //     { title: t('list'), path: paths.dashboard.post.root },
-          //     { title: t('details'), path: paths.dashboard.post.demo.details },
-          //     { title: t('create'), path: paths.dashboard.post.new },
-          //     { title: t('edit'), path: paths.dashboard.post.demo.edit },
-          //   ],
-          // },
-
-          // // JOB
-          // {
-          //   title: t('job'),
-          //   path: paths.dashboard.job.root,
-          //   icon: ICONS.job,
-          //   children: [
-          //     { title: t('list'), path: paths.dashboard.job.root },
-          //     { title: t('details'), path: paths.dashboard.job.demo.details },
-          //     { title: t('create'), path: paths.dashboard.job.new },
-          //     { title: t('edit'), path: paths.dashboard.job.demo.edit },
-          //   ],
-          // },
-
-          // // TOUR
-          // {
-          //   title: t('tour'),
-          //   path: paths.dashboard.tour.root,
-          //   icon: ICONS.tour,
-          //   children: [
-          //     { title: t('list'), path: paths.dashboard.tour.root },
-          //     { title: t('details'), path: paths.dashboard.tour.demo.details },
-          //     { title: t('create'), path: paths.dashboard.tour.new },
-          //     { title: t('edit'), path: paths.dashboard.tour.demo.edit },
-          //   ],
-          // },
-
-          // // FILE MANAGER
-          // {
-          //   title: t('file_manager'),
-          //   path: paths.dashboard.fileManager,
-          //   icon: ICONS.folder,
-          // },
-
-          // // MAIL
-          // {
-          //   title: t('mail'),
-          //   path: paths.dashboard.mail,
-          //   icon: ICONS.mail,
-          //   info: <Label color="error">+32</Label>,
-          // },
-
-          // // CHAT
-          // {
-          //   title: t('chat'),
-          //   path: paths.dashboard.chat,
-          //   icon: ICONS.chat,
-          // },
-
-          // // CALENDAR
-          // {
-          //   title: t('calendar'),
-          //   path: paths.dashboard.calendar,
-          //   icon: ICONS.calendar,
-          // },
-
-          // // KANBAN
-          // {
-          //   title: t('kanban'),
-          //   path: paths.dashboard.kanban,
-          //   icon: ICONS.kanban,
-          // },
         ],
       },
-
-      // DEMO MENU STATES
-      // {
-      //   subheader: t(t('other_cases')),
-      //   items: [
-      //     {
-      //       // default roles : All roles can see this entry.
-      //       // roles: ['user'] Only users can see this item.
-      //       // roles: ['admin'] Only admin can see this item.
-      //       // roles: ['admin', 'manager'] Only admin/manager can see this item.
-      //       // Reference from 'src/guards/RoleBasedGuard'.
-      //       title: t('item_by_roles'),
-      //       path: paths.dashboard.permission,
-      //       icon: ICONS.lock,
-      //       roles: ['admin', 'manager'],
-      //       caption: t('only_admin_can_see_this_item'),
-      //     },
-      //     {
-      //       title: t('menu_level'),
-      //       path: '#/dashboard/menu_level',
-      //       icon: ICONS.menuItem,
-      //       children: [
-      //         {
-      //           title: t('menu_level_1a'),
-      //           path: '#/dashboard/menu_level/menu_level_1a',
-      //         },
-      //         {
-      //           title: t('menu_level_1b'),
-      //           path: '#/dashboard/menu_level/menu_level_1b',
-      //           children: [
-      //             {
-      //               title: t('menu_level_2a'),
-      //               path: '#/dashboard/menu_level/menu_level_1b/menu_level_2a',
-      //             },
-      //             {
-      //               title: t('menu_level_2b'),
-      //               path: '#/dashboard/menu_level/menu_level_1b/menu_level_2b',
-      //               children: [
-      //                 {
-      //                   title: t('menu_level_3a'),
-      //                   path: '#/dashboard/menu_level/menu_level_1b/menu_level_2b/menu_level_3a',
-      //                 },
-      //                 {
-      //                   title: t('menu_level_3b'),
-      //                   path: '#/dashboard/menu_level/menu_level_1b/menu_level_2b/menu_level_3b',
-      //                 },
-      //               ],
-      //             },
-      //           ],
-      //         },
-      //       ],
-      //     },
-      //     {
-      //       title: t('item_disabled'),
-      //       path: '#disabled',
-      //       icon: ICONS.disabled,
-      //       disabled: true,
-      //     },
-      //     {
-      //       title: t('item_label'),
-      //       path: '#label',
-      //       icon: ICONS.label,
-      //       info: (
-      //         <Label color="info" startIcon={<Iconify icon="solar:bell-bing-bold-duotone" />}>
-      //           NEW
-      //         </Label>
-      //       ),
-      //     },
-      //     {
-      //       title: t('item_caption'),
-      //       path: '#caption',
-      //       icon: ICONS.menuItem,
-      //       caption:
-      //         'Quisque malesuada placerat nisl. In hac habitasse platea dictumst. Cras id dui. Pellentesque commodo eros a enim. Morbi mollis tellus ac sapien.',
-      //     },
-      //     {
-      //       title: t('item_external_link'),
-      //       path: 'https://www.google.com/',
-      //       icon: ICONS.external,
-      //     },
-      //     {
-      //       title: t('blank'),
-      //       path: paths.dashboard.blank,
-      //       icon: ICONS.blank,
-      //     },
-      //   ],
-      // },
     ],
     [t]
   );

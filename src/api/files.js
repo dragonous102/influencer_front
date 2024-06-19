@@ -1,14 +1,11 @@
-import useSWR from 'swr';
-import { useMemo } from 'react';
-
-import axiosInstance, { fetcher, endpoints } from 'src/utils/axios';
+import axiosInstance, { endpoints } from 'src/utils/axios';
 import { _mock } from 'src/_mock';
 
 // ----------------------------------------------------------------------
 
 export async function useFiles() {
   const URL = endpoints.files.list;
-  let resultData = { files: [], isError: false };
+  const resultData = { files: [], isError: false };
 
   await axiosInstance.get(URL).then((res) => {
     try {
@@ -33,12 +30,12 @@ export async function useFiles() {
 }
 
 export async function train_pdfs(filesList) {
-  let resultData = { isError: true, totalPage: 0, totalPrice: 0, totalToken: 0 };
+  const resultData = { isError: true, totalPage: 0, totalPrice: 0, totalToken: 0 };
 
   await axiosInstance.post(endpoints.files.train, { fileNames: filesList }).then((res) => {
     try {
-      resultData.isError = res.data.status == 'Success' ? false : true;
-      if (resultData.isError == false) {
+      resultData.isError = res.data.status === 'Success' ? false : true;
+      if (resultData.isError === false) {
         resultData.totalPage = res.data.total_pages;
         resultData.totalPrice = res.data.total_price;
         resultData.totalToken = res.data.total_tokens;
@@ -51,7 +48,7 @@ export async function train_pdfs(filesList) {
 }
 
 export async function uploads(formData) {
-  let resultData = { isError: true, fileNames: [] };
+  const resultData = { isError: true, fileNames: [] };
   await axiosInstance
     .post(
       endpoints.files.upload,

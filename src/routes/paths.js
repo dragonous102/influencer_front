@@ -113,14 +113,40 @@ export const paths = {
         edit: `${ROOTS.DASHBOARD}/tour/${MOCK_ID}/edit`,
       },
     },
-    influencermarketing: `${ROOTS.DASHBOARD}/influencermarketing`,
-    socialmedia: `${ROOTS.DASHBOARD}/socialmedia`,
-    emailmarketing: `${ROOTS.DASHBOARD}/emailmarketing`,
-    aimarketing: `${ROOTS.DASHBOARD}/aimarketing`,
-    affiliatemarketing: `${ROOTS.DASHBOARD}/affiliatemarketing`,
 
-    influencermarketing_platforms: `${ROOTS.DASHBOARD}/influencermarketing/platforms`,
-    socialmediamarketing_platforms: `${ROOTS.DASHBOARD}/socialmedia/platforms`,
-    emailmarketing_platforms: `${ROOTS.DASHBOARD}/emailmarketing/platforms`,
+    influencermarketing: {
+      root: `${ROOTS.DASHBOARD}/influencermarketing`,
+      platforms: `${ROOTS.DASHBOARD}/influencermarketing/platforms`,
+
+    },
+    socialmediamarketing: {
+      root: `${ROOTS.DASHBOARD}/socialmedia`,
+      platforms: `${ROOTS.DASHBOARD}/socialmedia/platforms`,
+      mornitoring: `${ROOTS.DASHBOARD}/socialmedia/mornitoring`,
+
+    },
+    emailmarketing:
+    {
+      root: `${ROOTS.DASHBOARD}/emailmarketing`,
+      platforms: `${ROOTS.DASHBOARD}/emailmarketing/platforms`,
+
+    },
+    aimarketing: {
+      root: `${ROOTS.DASHBOARD}/aimarketing`,
+      platforms: `${ROOTS.DASHBOARD}/aimarketing/platforms`,
+    },
+    affiliatemarketing: {
+      root: `${ROOTS.DASHBOARD}/affiliatemarketing`,
+      platforms: `${ROOTS.DASHBOARD}/affiliatemarketing/platforms`,
+    },
+    ecommerce: {
+      root: `${ROOTS.DASHBOARD}/affiliatemarketing`,
+      platforms: `${ROOTS.DASHBOARD}/affiliatemarketing/platforms`,
+    },
+    amazonmarketing: {
+      root: `${ROOTS.DASHBOARD}/amazonmarketing`,
+      platforms: `${ROOTS.DASHBOARD}/amazonmarketing/platforms`,
+    },
+
   },
 };

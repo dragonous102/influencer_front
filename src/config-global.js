@@ -37,4 +37,4 @@ export const SUPABASE_API = {
 export const MAPBOX_API = process.env.NEXT_PUBLIC_MAPBOX_API;
 
 // ROOT PATH AFTER LOGIN SUCCESSFUL
-export const PATH_AFTER_LOGIN = paths.dashboard.influencermarketing; // as '/dashboard'
+export const PATH_AFTER_LOGIN = paths.dashboard.influencermarketing.root; // as '/dashboard'
