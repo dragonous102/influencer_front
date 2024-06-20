@@ -57,31 +57,6 @@ export function useNavData() {
       {
         subheader: t('overview'),
         items: [
-          // {
-          //   title: t('app'),
-          //   path: paths.dashboard.root,
-          //   icon: ICONS.dashboard,
-          // },
-          // {
-          //   title: t('ecommerce'),
-          //   path: paths.dashboard.general.ecommerce,
-          //   icon: ICONS.ecommerce,
-          // },
-          // {
-          //   title: t('analytics'),
-          //   path: paths.dashboard.general.analytics,
-          //   icon: ICONS.analytics,
-          // },
-          // {
-          //   title: t('banking'),
-          //   path: paths.dashboard.general.banking,
-          //   icon: ICONS.banking,
-          // },
-          // {
-          //   title: t('booking'),
-          //   path: paths.dashboard.general.booking,
-          //   icon: ICONS.booking,
-          // },
           {
             title: t('Articles'),
             path: paths.dashboard.fileManager,
@@ -105,7 +80,7 @@ export function useNavData() {
         items: [
           {
             title: t('Platforms'),
-            path: paths.dashboard.invoice.root,
+            path: paths.dashboard.influencermarketing.root,
             icon: ICONS.blog,
             children: [
               { title: t('Influencer Marketing Platforms'), path: paths.dashboard.influencermarketing.platforms },
@@ -119,7 +94,7 @@ export function useNavData() {
           },
           {
             title: t('Agencies'),
-            path: paths.dashboard.invoice.root,
+            path: paths.dashboard.influencermarketing.root,
             icon: ICONS.blog,
             children: [
               { title: t('Influencer Marketing Agencies'), path: paths.dashboard.influencermarketing.platforms },
@@ -133,21 +108,21 @@ export function useNavData() {
           },
           {
             title: t('Resources'),
-            path: paths.dashboard.invoice.root,
+            path: paths.dashboard.influencermarketing.root,
             icon: ICONS.job,
             children: [
-              { title: t('Benchmark Report 2024'), path: paths.dashboard.invoice.root },
-              { title: t('Tools'), path: paths.dashboard.invoice.timeline },
+              { title: t('Benchmark Report 2024'), path: paths.dashboard.influencermarketing.root },
+              { title: t('Tools'), path: paths.dashboard.influencermarketing.root },
               { title: t('Member Login'), path: paths.auth.jwt.login },
             ],
           },
           {
             title: t('About Us'),
-            path: paths.dashboard.invoice.root,
+            path: paths.dashboard.influencermarketing.root,
             icon: ICONS.ecommerce,
             children: [
-              { title: t('About Our Company'), path: paths.dashboard.invoice.root },
-              { title: t('Agencies Testing Methodology'), path: paths.dashboard.invoice.timeline },
+              { title: t('About Our Company'), path: paths.dashboard.influencermarketing.root },
+              { title: t('Agencies Testing Methodology'), path: paths.dashboard.influencermarketing.root },
               { title: t('Software Testing Methodology'), path: paths.auth.jwt.login },
             ],
           },

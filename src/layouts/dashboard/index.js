@@ -12,6 +12,7 @@ import Header from './header';
 import NavMini from './nav-mini';
 import NavVertical from './nav-vertical';
 import NavHorizontal from './nav-horizontal';
+import Footer from '../main/footer';
 
 // ----------------------------------------------------------------------
 
@@ -41,6 +42,7 @@ export default function DashboardLayout({ children }) {
         {renderHorizontal}
 
         <Main>{children}</Main>
+        <Footer></Footer>
       </>
     );
   }

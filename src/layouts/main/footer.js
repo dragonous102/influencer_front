@@ -21,23 +21,31 @@ import Iconify from 'src/components/iconify';
 
 const LINKS = [
   {
-    headline: 'Minimal',
+    headline: 'Company',
     children: [
-      { name: 'About us', href: paths.about },
-      { name: 'Contact us', href: paths.contact },
-      { name: 'FAQs', href: paths.faqs },
+      { name: 'Cookie Policy', href: "#" },
+      { name: 'Privacy Policy', href: "#" },
+      { name: 'Terms & Conditions', href: "#" },
+      { name: 'Terms & Conditions', href: "#" },
+      { name: 'Contact Us', href: paths.dashboard.contact },
     ],
   },
   {
-    headline: 'Legal',
+    headline: 'Free Tools',
     children: [
-      { name: 'Terms and Condition', href: '#' },
-      { name: 'Privacy Policy', href: '#' },
+      { name: 'TikTok Engagement Calculator', href: '#' },
+      { name: 'Instagram Calculator', href: '#' },
     ],
   },
   {
-    headline: 'Contact',
-    children: [{ name: 'support@minimals.cc', href: '#' }],
+    headline: 'Popular',
+    children: [
+      { name: 'Influencer Marketing Platforms', href: '#' },
+      { name: 'Influencer Marketing Agencies', href: '#' },
+      { name: 'Social Media Marketing Platforms', href: '#' },
+      { name: 'Email Marketing Software', href: '#' }
+
+    ],
   },
 ];
 
@@ -82,8 +90,8 @@ export default function Footer() {
 
       <Container
         sx={{
-          pt: 10,
-          pb: 5,
+          pt: 3,
+          pb: 3,
           textAlign: { xs: 'center', md: 'unset' },
         }}
       >
@@ -104,8 +112,7 @@ export default function Footer() {
                 mx: { xs: 'auto', md: 'unset' },
               }}
             >
-              The starting point for your next project with Minimal UI Kit, built on the newest
-              version of Material-UI ©, ready to be customized to your style.
+              The leading Social Media resource for Brands
             </Typography>
 
             <Stack
@@ -131,7 +138,7 @@ export default function Footer() {
             </Stack>
           </Grid>
 
-          <Grid xs={12} md={6}>
+          <Grid xs={12} md={8}>
             <Stack spacing={5} direction={{ xs: 'column', md: 'row' }}>
               {LINKS.map((list) => (
                 <Stack
@@ -162,7 +169,7 @@ export default function Footer() {
         </Grid>
 
         <Typography variant="body2" sx={{ mt: 10 }}>
-          © 2021. All rights reserved
+          © 2024. All rights reserved
         </Typography>
       </Container>
     </Box>
